@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Primo</title>
+    <style>
+        body{
+            background-color: #3d53df;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        input{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            color: #3d53df;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #3d53df;
+            color: #fff;
+        }
+        p{
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        #resultado{
+            color: #fff;
+            font-weight: bold;
+        }
+        #resultadoPrimo{
+            color: #00ff00;
+        }
+        #resultadoNaoPrimo{
+            color: #ff0000;
+        }
+        #resultadoPrimo, #resultadoNaoPrimo{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio Numero Primo</h1>
+    <input id="txtNumero" type="number" placeholder="Digite um número">
+    <button id="btnValidarPrimo">Verificar</button>
+    <p id="resultado"></p>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -4,67 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIDEO JUEGOS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        #search-form {
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        /*responsividad*/
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            table {
-                font-size: 14px;
-            }
-            th, td {
-                padding: 6px;
-            }
-        }
-        @media (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-            table {
-                font-size: 12px;
-            }
-            th, td {
-                padding: 4px;
-            }
-        }
-     
-    </style>
+    <link rel="stylesheet" href="./css/estilos.css">
+  
 </head>
 <body>
     <div>
@@ -72,6 +13,7 @@
         <p>Bienvenido a la página de búsqueda de videojuegos. Aquí puedes buscar información sobre tus juegos favoritos.</p>
         <!--formulario de busqueda-->
         <div id="search-form"></div>
+
         <!--tabla de resultados-->
         <table id="videogames-table">
             <thead>
@@ -87,6 +29,7 @@
                 
             </tbody>
         </table>
+        
     </div>
     
     <script type="module" src="./main.js"></script>

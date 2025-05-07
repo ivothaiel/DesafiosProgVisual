@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #555;
+}
+#search-form {
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#search-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#search-controls input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#search-controls button {
+    margin-left: 10px;
+}
+#search-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#search-controls button:hover:disabled {
+    background-color: #ccc;
+}
+#search-controls button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+#search-controls button:active:not(:disabled) {
+    background-color: #3e8e41;
+}
+#search-controls button:focus {
+    outline: none;
+}
+
+
+
+
+/*responsividad*/
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 6px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 4px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    button:hover {
+        background-color: #ddd;
+    }
+}

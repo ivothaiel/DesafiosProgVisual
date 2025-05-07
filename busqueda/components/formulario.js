@@ -2,9 +2,9 @@ import { buscarPorFecha, buscarPorGenero, buscarPorID, buscarPorNombre, videojue
 import { inicializarTabla } from "./tablaJuego.js";
 
 export const inicializarBuscador = (data) => {
-    const container = document.getElementById('search-form');
+    const container = document.getElementById('search-form'); // ACA SELECCIONA EL CONTENEDOR DEL FORMULARIO
     container.innerHTML = `
-    <div>
+    <div class="search-controls">
     <label><input type="radio" name="filtro" value="id" checked>ID</label>
     <label><input type="radio" name="filtro" value="nombre">Nombre</label>
     <label><input type="radio" name="filtro" value="fecha">Fecha</label>
@@ -12,8 +12,7 @@ export const inicializarBuscador = (data) => {
     <input type="text" id="inputValor" placeholder="Buscar...">
     <button id="btnBuscar">Buscar</button>
     <label><input type="checkbox" id="checkLimpiar">Limpiar</label>
-    <button id="btnLimpiar">Limpiar</button>
-    <div>`;
+    </div>`;
     const radios = container.querySelectorAll('input[name="filtro"]');
     const inputValor = container.querySelector('#inputValor');
     const btnBuscar = container.querySelector('#btnBuscar');
@@ -44,7 +43,16 @@ export const inicializarBuscador = (data) => {
 
     /* This code snippet is adding an event listener to the "Buscar" button (`btnBuscar`). When the
     button is clicked, the function inside the event listener is executed. Here's a breakdown of
-    what the function is doing: */
+    what the function is doing:
+    1. It retrieves the value of the selected radio button (the filter type) using `querySelector`.
+    2. If no radio button is selected, the function returns early and does nothing.
+    3. It retrieves the value entered in the input field (`inputValor`).
+    4. It initializes a variable `resultados` with the original data (`data`).
+    5. It uses a switch statement to determine which filter was selected and calls the appropriate
+    function to filter the data based on the selected filter type and the input value.
+    6. Finally, it calls the `inicializarTabla` function to update the table with the filtered results.
+    
+    */
     btnBuscar.addEventListener('click', () => {
         const seleccionado = container.querySelector('input[name="filtro"]:checked').value;
         if (!seleccionado)

@@ -1,3 +1,4 @@
+//aca importamos el arreglo
 export const videojuegos = [
     {
         id: 1,
@@ -5,7 +6,7 @@ export const videojuegos = [
         genero: "Acción/Aventura",
         fechaLanzamiento: "03/03/2017",
     },{
-        id: 2,
+        id: 1,
         nombre: "Super Mario Odyssey",
         genero: "Plataformas",
         fechaLanzamiento: "27/10/2017",
@@ -15,12 +16,12 @@ export const videojuegos = [
         genero: "RPG",
         fechaLanzamiento: "19/05/2015",
     },{
-        id: 4,
+        id: 3,
         nombre: "Dark Souls III",
         genero: "Acción/RPG",
         fechaLanzamiento: "24/03/2016",
     },{
-        id: 5,
+        id: 2,
         nombre: "Overwatch",
         genero: "Shooter en equipo",
         fechaLanzamiento: "24/05/2016",
@@ -40,28 +41,29 @@ export const videojuegos = [
         genero: "RPG/JRPG",
         fechaLanzamiento: "31/10/2019",
     },{
-        id: 9,
+        id: 7,
         nombre: "God of War (2018)",
         genero: "Acción/Aventura",
         fechaLanzamiento: "20/04/2018",
     },{
-        id: 10,
+        id: 7,
         nombre: "Red Dead Redemption 2",
         genero: "Acción/Aventura",
         fechaLanzamiento: "26/10/2018",
     }
 ];
 
+//estas son funciones para poder buscar por id, nombre, fecha y genero
 export const buscarPorID = (arr,id) => {
      return arr.filter(juego => juego.id === id);
 }
 
 export const buscarPorNombre = (arr,nombre) => {
-    return arr.filter(juego => juego.nombre.toLowerCase().includes(nombre.toLowerCase()));
+    return arr.filter(juego => juego.nombre.toLowerCase().includes(nombre.toLowerCase())); //se hace tolowerCase para que no importe si el usuario pone mayusculas o minusculas
 }
 
 export const buscarPorFecha = (arr,fecha) => {
-    return arr.filter(juego => juego.fechaLanzamiento === fecha);
+    return arr.filter(juego => juego.fechaLanzamiento === fecha); //se busca por fecha exacta
 }
 export const buscarPorGenero = (arr,genero) => {
    return  arr.filter(juego => juego.genero.toLowerCase().includes(genero.toLowerCase()));

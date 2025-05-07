@@ -1,4 +1,3 @@
-
 export const esPrimo = (numero) => {
     if (numero <= 1) return false;
     if (numero === 2) return true;

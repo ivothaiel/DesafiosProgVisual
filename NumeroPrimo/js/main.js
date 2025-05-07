@@ -12,6 +12,10 @@ const parrafoResultado = document.getElementById("resultado");
 btnValidarNumero.addEventListener("click", () => {
     const numeroIngresado = parseInt(txtNumero.value);
     const resultado = esPrimo(numeroIngresado)
+    if (isNaN(numeroIngresado)) {
+        parrafoResultado.textContent = "Por favor, ingrese un número válido.";
+        return;
+    }
     
    /**
     * aca abajo, estoy manipulando el DOM 

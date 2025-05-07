@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIDEO JUEGOS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        #search-form {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+     
+    </style>
 </head>
 <body>
-    <h1>BIENVENIDO A NUESTRA TIENDA</h1>
-    <h2>BUSQUEDA DE VIDEO JUEGOS</h2>
+    <div>
+        <h1>VIDEO JUEGOS</h1>
+        <p>Bienvenido a la página de búsqueda de videojuegos. Aquí puedes buscar información sobre tus juegos favoritos.</p>
+        <!--formulario de busqueda-->
+        <div id="search-form"></div>
+        <!--tabla de resultados-->
+        <table id="videogames-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Fecha de lanzamiento</th>
+                    <th>Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--filas generadas dinamicamente-->
+            </tbody>
+        </table>
+    </div>
     
     <script type="module" src="./main.js"></script>
 </body>

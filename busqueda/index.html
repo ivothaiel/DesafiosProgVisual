@@ -39,6 +39,30 @@
         tr:hover {
             background-color: #f1f1f1;
         }
+
+        /*responsividad*/
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 6px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 4px;
+            }
+        }
      
     </style>
 </head>
@@ -60,6 +84,7 @@
             </thead>
             <tbody>
                 <!--filas generadas dinamicamente-->
+                
             </tbody>
         </table>
     </div>
